@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Form</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #71b7e6, #9b59b6);
+      padding: 20px;
+    }
+    .container {
+      width: 100%;
+      max-width: 700px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .title {
+      font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+    form .user-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .input-box {
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+    }
+    .input-box span {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    .input-box input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .input-box input:focus {
+      border-color: #9b59b6;
+    }
+    .gender-details {
+      margin: 20px 0;
+    }
+    .gender-details span {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .gender-category {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .gender-category label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .gender-category input {
+      margin-right: 8px;
+    }
+    .button input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient(135deg, #71b7e6, #9b59b6);
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .button input:hover {
+      background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    }
+    @media (max-width: 600px) {
+      .input-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="title">Registration</div>
+  <form action="https://formsubmit.co/your-zr.coding.25@gmail.com" method="POST">
+    <div class="user-details">
+      <div class="input-box">
+        <span>Full Name</span>
+        <input type="text" name="Full Name" placeholder="Your Name" required>
+      </div>
+      <div class="input-box">
+        <span>Username</span>
+        <input type="text" name="Username" placeholder="Your Username" required>
+      </div>
+      <div class="input-box">
+        <span>Email</span>
+        <input type="email" name="Email" placeholder="Email Address" required>
+      </div>
+      <div class="input-box">
+        <span>Phone Number</span>
+        <input type="text" name="Phone Number" placeholder="Phone Number" required>
+      </div>
+      <div class="input-box">
+        <span>Password</span>
+        <input type="password" name="Password" placeholder="Your Password" required>
+      </div>
+      <div class="input-box">
+        <span>Confirm Password</span>
+        <input type="password" name="Confirm Password" placeholder="Confirm Your Password" required>
+      </div>
+    </div>
+    <div class="gender-details">
+      <span>Gender</span>
+      <div class="gender-category">
+        <label><input type="radio" name="Gender" value="Male" required> Male</label>
+        <label><input type="radio" name="Gender" value="Female" required> Female</label>
+        <label><input type="radio" name="Gender" value="Prefer not to say" required> Prefer not to say</label>
+      </div>
+    </div>
+    <div class="button">
+      <input type="submit" value="Register">
+    </div>
+
+    <!-- Anti Spam Hidden -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://your-redirect-page.com/thank-you.html">
+  </form>
+</div>
+
+</body>
+</html>
